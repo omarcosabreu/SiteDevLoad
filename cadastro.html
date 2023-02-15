@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | DEVLoad</title>
+    <link rel="icon" type="image/svg" href="public/logoicon.svg" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header class="navbar_header">
+        <nav class="nav__menu">
+            <div class="nav__toggle"></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Ver Vagas</a></li>
+                <li><a href="#" class="tech">Recrutadores</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <section class="main__login" style="background-color: #bcafde;">
+        <form method="post">
+            <div class="right__login">
+                <div class="card__cadastro">
+                    <h2>Crie Seu Perfil Grátis</h2>
+                    <div class="login">
+                        <input type="text" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="login">
+                        <input type="email" name="email" placeholder="Digite o seu e-mail" required>
+                    </div>
+                    <div class="login">
+                        <input type="text" name="area" placeholder="Área de atuação" required>
+                    </div>
+                    <div class="login">
+                        <input type="password" name="senha" placeholder="Crie sua senha" required>
+                    </div>
+
+                    <!-- <div class="termos">
+                        <p>Ao se cadastrar, você aceita nossos</p>
+                        <a class="termos__link" href="#">termos de uso</a></br>
+                        <a class="termos__link" href="#">política de privacidade</a>
+                    </div> -->
+                    <button onclick="adicionarPerfil()" type="submit" class="btn__login">Cadastrar</button>
+                    <span>Já tem uma conta?
+                        <a target="_self" href="index.html">Faça Login</a>
+                    </span>
+                </div>
+            </div>
+        </form>
+
+        <div class="cadastro__container">
+            <h1>Encontre as melhores oportunidades de trabalho na área de TI com a nossa plataforma.</h1>
+            <img src="./public/student.svg" class="left__login__img" alt="animação austronauta" />
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
