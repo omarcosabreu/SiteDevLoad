@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +16,7 @@
 
 <body>
     <header class="navbar_header">
+        <span><img src="./public/logoicon.svg" alt=""></span>
         <nav class="nav__menu">
             <div class="nav__toggle"></div>
             <ul>
@@ -28,41 +30,29 @@
     </header>
 
     <section class="main__login" style="background-color: #bcafde;">
-        <form method="post">
+        <div method="post">
             <div class="right__login">
                 <div class="card__cadastro">
                     <h2>Crie Seu Perfil Grátis</h2>
-                    <div class="login">
+                    <form id="cadastro_form">
                         <input type="text" name="nome" placeholder="Digite seu nome" required>
-                    </div>
-                    <div class="login">
                         <input type="email" name="email" placeholder="Digite o seu e-mail" required>
-                    </div>
-                    <div class="login">
-                        <input type="text" name="area" placeholder="Área de atuação" required>
-                    </div>
-                    <div class="login">
                         <input type="password" name="senha" placeholder="Crie sua senha" required>
-                    </div>
-
-                    <!-- <div class="termos">
-                        <p>Ao se cadastrar, você aceita nossos</p>
-                        <a class="termos__link" href="#">termos de uso</a></br>
-                        <a class="termos__link" href="#">política de privacidade</a>
-                    </div> -->
-                    <button onclick="adicionarPerfil()" type="submit" class="btn__login">Cadastrar</button>
+                    </form>
+                    <button type="submit" class="btn__login">Cadastrar</button>
                     <span>Já tem uma conta?
                         <a target="_self" href="index.html">Faça Login</a>
                     </span>
                 </div>
             </div>
-        </form>
+        </div>
 
         <div class="cadastro__container">
             <h1>Encontre as melhores oportunidades de trabalho na área de TI com a nossa plataforma.</h1>
             <img src="./public/student.svg" class="left__login__img" alt="animação austronauta" />
         </div>
     </section>
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
 </body>
+
 </html>

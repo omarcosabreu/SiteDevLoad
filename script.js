@@ -1,20 +1,52 @@
-function adicionarPerfil(event) {
-  event.preventDefault() // evitar que a página seja recarregada após o envio do formulário
+  const form = document.getElementById("#cadastro_form")
 
-  const nome = document.getElementsByName("nome")[0].value
-  const email = document.getElementsByName("email")[0].value
-  const area = document.getElementsByName("area")[0].value
-  const senha = document.getElementsByName("senha")[0].value
+  form.addEventListener("submit", (event) => {
+    // Impedir o envio do formulário
+    event.preventDefault()
 
-  const perfil = {
-    nome: nome,
-    email: email,
-    area: area,
-    senha: senha,
+    // Obter os valores dos campos do formulário
+    const nome = form.nome.value.trim()
+    const email = form.email.value.trim()
+    const senha =form.senha.value.trim()
+
+    // Validar os valores dos campos
+    if (nome === "") {
+      alert("Por favor, preencha o campo Nome.")
+      form.nome.focus()
+      return false
+    }
+
+    if (email === "") {
+      alert("Por favor, preencha o campo Email.")
+      form.email.focus()
+      return false
+    }
+
+    if (!validarEmail(email)) {
+      alert("Por favor, preencha um endereço de email válido.")
+      form.email.focus()
+      return false
+    }
+
+    if (senha === "") {
+      alert("Por favor, preencha o campo Senha.")
+      form.senha.focus()
+      return false
+    }
+
+    // Envie o formulário
+    alert("O formulário foi enviado com sucesso!")
+    form.reset()
+  })
+
+  function validarEmail(email) {
+    // Expressão regular para validação de email
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return re.test(email)
   }
 
 
-  console.log(perfil) // Exemplo de como você pode usar os dados armazenados
+  
 
-  // Outras ações que você pode querer realizar com os dados inseridos
-}
+
+

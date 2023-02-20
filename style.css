@@ -25,6 +25,12 @@ body {
   padding: 20px 0;
 }
 
+.logo_dev {
+  width: 75px;
+  display: flex;
+  margin: 0 -190px;
+}
+
 .nav__menu ul {
   display: flex;
   list-style: none;
@@ -130,7 +136,41 @@ li .tech:hover {
   text-decoration: none;
 }
 
-/* Page Cadastro*/
+.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 8px;
+}
+
+.login > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background: #514869;
+  color: #f0ffffde;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  box-shadow: 0px 10px 40px #00000056;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.login > label {
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+
+.login > input::placeholder {
+  color: #f0ffff94;
+}
+
+
+/*---------------------- Page Cadastro ---------------------------------------*/
 
 .card__cadastro {
   margin-top: 60px;
@@ -170,33 +210,6 @@ li .tech:hover {
   font-size: 4rem;
 }
 
-.termos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.termos > p {
-  color: white;
-  letter-spacing: 1px;
-}
-
-.termos > a {
-  color: white;
-  text-decoration: none;
-  text-decoration: underline;
-  margin-top: -18px;
-}
-
-.termos > a:hover {
-  color: #00ff88;
-}
-
-.termos__link {
-  padding: 4px;
-}
-
 .card__cadastro > span {
   color: white;
 }
@@ -206,21 +219,17 @@ li .tech:hover {
   text-decoration: none;
 }
 
-.left__login__img {
-  width: 23vw;
-  height: auto;
-}
-
-.login {
+#cadastro_form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  gap: 16px;
   margin: 8px;
 }
 
-.login > input {
+#cadastro_form > input {
   width: 100%;
   border: none;
   border-radius: 10px;
@@ -234,14 +243,20 @@ li .tech:hover {
   box-sizing: border-box;
 }
 
-.login > label {
+#cadastro_form > label {
   color: white;
   margin-bottom: 10px;
   font-weight: 100;
 }
 
-.login > input::placeholder {
+#cadastro_form > input::placeholder {
   color: #f0ffff94;
+}
+
+
+.left__login__img {
+  width: 23vw;
+  height: auto;
 }
 
 .btn__login {
@@ -365,11 +380,6 @@ li .tech:hover {
 .container__footer {
   display: flex;
   justify-content: space-around;
-  /* background: linear-gradient(
-    45deg,
-    rgb(103, 75, 255) 0%,
-    rgb(230, 0, 196) 100%
-  ); */
   background-color: black;
   padding: 15px;
   color: white;
@@ -379,30 +389,34 @@ li .tech:hover {
 /*---------------------------------------------------------------*/
 
 @media (max-width: 768px) {
+  /*--------- Header -----------*/
+   .logo_dev {
+    margin-left: -80px;
+  }
+  
   /*Menu login*/
-
   .main__login {
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* order: -1; */
-  }
-
-  .main__login h1 {
-    display: none;
+    height: 95vh;
   }
 
   .left__container {
-    
+    display: none;
   }
 
-  .left__login__img {
-    display: none;
+  .container__login {
+    height: auto;
+    margin-top: 40px;
   }
 
   .card__login {
     width: 500px;
-    margin-bottom: 40px;
+  }
+
+  .left__login__img {
+    display: none;
   }
 
   .login {
@@ -413,7 +427,8 @@ li .tech:hover {
     width: 80%;
   }
 
-  /*Cadastro*/
+  /*--------------- page cadastro
+  ----------------------------*/
 
   .card__cadastro {
     width: 500px;
@@ -491,15 +506,16 @@ li .tech:hover {
 }
 
 @media (max-width: 414px) {
-    *html {
-        width: 414px;
-    }
-
-  /*login*/
-  .main__login {
-    height: auto;
+  /*---------- Header ----------*/
+  .logo_dev {
+    margin-left: -80px;
   }
 
+  .nav__toggle, ul, li, a {
+    display: none;
+  }
+
+    /*------- page login ---------*/
   .login {
     width: 200px;
   }
@@ -508,21 +524,19 @@ li .tech:hover {
     display: none;
   }
 
-  .card__login span {
-    display: none;
-  }
-
-  /*cadastro*/
+  /*------------- page cadastro 
+  -------------------------*/
   .card__cadastro {
     width: 300px;
-    margin-bottom: 20px;
+    height: 450px;
   }
 
   .cadastro__container {
     display: none;
   }
 
-  /*extra*/
+  /* ---------------- extra
+  ----------------------------*/
 
   .conteudo__extra {
     display: flex;
