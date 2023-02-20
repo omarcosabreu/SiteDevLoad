@@ -391,7 +391,7 @@ li .tech:hover {
 @media (max-width: 768px) {
   /*--------- Header -----------*/
    .logo_dev {
-    margin-left: -80px;
+    margin-left: -68px;
   }
   
   /*Menu login*/
@@ -508,10 +508,10 @@ li .tech:hover {
 @media (max-width: 414px) {
   /*---------- Header ----------*/
   .logo_dev {
-    margin-left: -80px;
+    margin-left: -68px;
   }
 
-  .nav__toggle, ul, li, a {
+  .menu   {
     display: none;
   }
 
